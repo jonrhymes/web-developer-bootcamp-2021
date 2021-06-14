@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Labels</title>
+</head>
+<body>
+    <h1>Forms and Labels Demo</h1>
+
+    <form action="/tacos">
+
+        <p>
+            <!-- Alternative way to lavel an input (less common)-->
+            <label>
+                Enter a Number:
+                <input type="number" placeholder="enter a number">
+            </label> 
+        </p>
+        <p>
+            <label for="password">Enter a Password:</label>
+            <input type="password" placeholder="password" id="password">
+        </p>
+        <p>
+            <label for="color">Choose a Color:</label>
+            <input id="color" type="color" id="color">
+        </p>
+        <p>
+            <label for="number">Pick a Num ber:</label>
+            <input id="number" type="number" placeholder="enter a number">
+            <!-- this button doesn't submit the form b/c of the "type" attribute-->
+            <button type="button">Regular button (won't submit)</button>
+            <!-- this button submits the form -->
+            <button>Submit!!!</button>
+            <!-- So does this one: -->
+            <input type="submit" value="Click me!">
+        </p>
+    </form>
+
+    <!-- Outside of form, no default behavior-->
+    <button>Not inside form</button>
+</body>
+</html>
