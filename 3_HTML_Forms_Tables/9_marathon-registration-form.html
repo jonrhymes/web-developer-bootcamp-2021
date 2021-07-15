@@ -9,7 +9,7 @@
 <body>
     <h1>Race Registration!</h1>
 
-    <form action="/register">
+    <form action="">
         <div>
             <label for="firstName">First Name: </label>
             <input type="text" name="firstName" id="firstName" required>
@@ -34,19 +34,19 @@
 
         <div>
             <label for="email">Email: </label>
-            <input type="email" required>
-            <label for="passowrd">Password: </label>
-            <input type="password" required>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required>
         </div>
 
 
         <div>
             <label for="age">Select Age Group: </label>
             <select name="age" id="age">
-                <option value="">under 18</option>
-                <option value="18-30">18-30</option>
-                <option value="30-50">30-50</option>
-                <option value="50-above">50 or above</option>
+                <option value="kids">under 18</option>
+                <option value="youngadults">18-30</option>
+                <option value="adults">30-50</option>
+                <option value="seniors">50 or above</option>
             </select>
         </div>
 
