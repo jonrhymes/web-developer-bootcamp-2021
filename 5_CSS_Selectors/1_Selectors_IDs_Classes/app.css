@@ -1,0 +1,35 @@
+body {
+    background-color: #e9edc9;
+}
+
+button {
+    font-size: 40px;
+    background-color: #52b69a;
+}
+
+h1, h2 {
+    color: darkslateblue;
+}
+
+#signup {
+    background-color: #3d405b;
+    color: #fefae0;
+}
+
+span {
+    color: darkolivegreen;
+}
+
+.tag {
+    background-color: #dc2f02;
+    color: #fdffb6;
+    font-size: 16px;
+}
+
+.post a {
+    color: darkolivegreen;
+}
+
+footer a {
+    color: #dc2f02;
+}
