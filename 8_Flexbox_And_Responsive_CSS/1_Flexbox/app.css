@@ -1,0 +1,43 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;   
+    flex-direction: row;
+    
+    /* Justify-Content is Main Axis */
+    justify-content: center;
+    
+    /* Align-Items is Cross Axis */
+    align-items: flex-end;
+    
+    flex-wrap: wrap;
+    
+    /* Align-Content only works if Flex-Wrap is on
+    align-content: flex-start; */
+
+    /* Align-Self applies to individual elements */
+
+    /* Seems Align-self doesn't work when Align-Content is on */
+}
+
+#container div{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+div:nth-of-type(3) {
+    align-self: flex-start;
+}
+div:nth-of-type(4) {
+    align-self: center;
+}
