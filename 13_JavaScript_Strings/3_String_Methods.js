@@ -8,6 +8,7 @@ console.log("lol".toUpperCase());
 
 let msg = 'I am king';
 let yellMsg = msg.toUpperCase(); // 'I AM KING'
+// toUpperCase does not change the original element, it makes a copy
 
 let angry = 'LeAvE mE aLoNe!';
 angry.toLowerCase(); // 'leave me alone'
