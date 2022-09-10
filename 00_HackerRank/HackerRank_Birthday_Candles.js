@@ -7,28 +7,16 @@ candles = [4,4,1,3]
 The maximum height candles are  units high. There are 2 of them, so return 2.
 */
 
-// refactor - doesn't work
-
 function birthdayCakeCandles(candles) {
     // Write your code here
-    let highest = 0;
-    for(let i = 0; i < candles.length; i++) {
-        highest = candles[i];
-        if(candles[i + 1] > highest) {
-            highest = candles[i + 1];
-        } else {
-            break;
+    let max = Math.max(...candles);
+    // console.log(max);
+    let count = 0;
+    for(let candle of candles) {
+        if(candle == max) {
+            count++;
         }
-        return highest;
     }
-    function counter(array, element) {
-        let count = 0;
-        for(let j = 0; j < array.length; j++) {
-            if(array[j] == element) {
-                count++;
-            }
-        }
-        return count;
-    }
-    return counter(candles, highest);
+    // console.log(count);
+    return count;
 }
