@@ -22,3 +22,14 @@ console.log(indexArraySpread); // { '0': 2, '1': 4, '2': 6, '3': 8 }
 
 const indexStringSpread = {..."HELLO"};
 console.log(indexStringSpread); // { '0': 'H', '1': 'E', '2': 'L', '3': 'L', '4': 'O' }
+
+
+const dataFromForm = {
+    email: 'blueman@gmail.com',
+    password: 'tobias123!',
+    username: 'tfunke'
+}
+
+const newUser = {...dataFromForm, id: 2345, isAdmin: true}
+
+console.log(newUser);
