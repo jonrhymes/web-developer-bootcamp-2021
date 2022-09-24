@@ -139,3 +139,16 @@ h1New.insertAdjacentElement('afterend', h2New);
 const h3z = document.createElement('h3');
 h3z.innerText = "I am h3";
 h1.after(h3z);
+
+
+// remove & removeChild
+// removeChild
+const firstLi = document.querySelector('li');
+const ul = firstLi.parentElement;
+console.log(ul);
+ul.removeChild(firstLi);
+
+// remove
+const img2 = document.querySelector('img');
+img2.remove();
+img2.parentElement.removeChild('img'); // same way
