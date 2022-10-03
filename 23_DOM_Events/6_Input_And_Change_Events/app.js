@@ -11,7 +11,7 @@ const userh1 = document.querySelector('#enter');
 const userInput = document.querySelector('#username')
 
 userInput.addEventListener('input', function(e) {
-    userh1.innerText = `Welcome, ${userInput.value}`;
+    userh1.innerText = `Welcome, ${userInput.value}!`;
     if(userInput.value == '') {
         userh1.innerText = 'Enter Your Username';
     }
