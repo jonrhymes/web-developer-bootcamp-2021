@@ -8,4 +8,4 @@ setTimeout(() => {
 }, 3000); // runs 3rd
 console.log("I AM AT THE END OF THE FILE!") // runs 2nd
 
-// browser does the work - uses Web APIs that handle tasks in the background
+// browser does the work - uses Web APIs that handle tasks in the background and returns it to the stack in the form of a callback
