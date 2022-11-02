@@ -1,0 +1,48 @@
+Terminal = text-based interface to computer
+Shell = program running on the terminal
+Bash = most popular shell 
+zsh = Z Shell, another popular shell 
+
+
+Everytime a terminal is open, it starts from the User's Home Directory
+
+Commands:
+ls = list
+~ = references home direcotry
+pwd = print working directory (where you are currently)
+cd = change directory (move forward and backwards) relative
+cd Desktop = moves forward into folder
+cd .. = back up a level
+
+
+Absolute Path:
+cd /Users/jonathanrhymes/Desktop (can do this from any folder)
+
+cd /Users = root directory (first forward slash)
+
+cd ~ = takes you to Home directory (/Users/jonathanrhymes)
+
+
+Relative Path:
+cd ../../Users/jonathanrhymes
+
+
+Making Directories:
+mkdir [name(s)] = make directory 
+
+
+Manual:
+man
+man ls = explains ls and flags
+man touch
+
+
+Touch:
+touch name.txt = makes a file with an extension (if it does not exist)
+if you touch a file that already exists, it will update the time to when it was touched
+
+
+Remove Files & Folders:
+rm example.txt styles.css = deletes the file(s)
+rmdir Frogs = deletes the folder(s) (if directory is empty)
+rm -rf Frogs = deletes the folder if it has files in it
