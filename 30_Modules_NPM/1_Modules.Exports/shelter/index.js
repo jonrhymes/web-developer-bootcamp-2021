@@ -1,0 +1,10 @@
+// index.js is the main file - the entry point for the other files
+
+const blue = require('./blue');
+const janet = require('./janet');
+const sadie = require('./sadie');
+
+const allCats = [blue, janet, sadie];
+// console.log(allCats);
+
+module.exports = allCats;
