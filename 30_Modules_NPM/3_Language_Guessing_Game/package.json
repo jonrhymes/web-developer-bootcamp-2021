@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "colors": "^1.4.0",
     "franc": "^6.1.0",
     "langs": "^2.0.0"
   },
   "name": "3_language_guessing_game",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
