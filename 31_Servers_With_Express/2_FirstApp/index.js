@@ -22,12 +22,12 @@ const port = 3000;
 // '/' => 'welcome to my homepage'
 
 app.get('/', (req, res) => {
-    res.send("Welcome to my homepage")
+    res.send("Welcome to my homepage!")
 })
 
 app.get('/cats', (req, res) => {
     console.log("cat request");
-    res.send("<h1>MEOW</h1>");
+    res.send("<h1>MEOW!</h1>"); // send back html
 });
 
 app.post('/cats', (req, res) => {
@@ -47,12 +47,27 @@ app.get('/r/:subreddit/:postId', (req, res) => {
     res.send(`<h1>Viewing PostId: ${postId} on the ${subreddit} subreddit</h1>`);
     // res.send(`this is a subreddit`);
 })
+// http://localhost:8080/r/BackyardChickens/4985
+
+app.get('/search', (req, res) => {
+    console.log(req.query);
+    const { q } = req.query;
+    // res.send("Got the request query");
+    if(!q) {
+        res.send(`Nothing found if nothing searched`);
+    }
+    res.send(`<h1>Search results for: ${q}</h1>`);
+})
+// http://localhost:8080/search?q=alison&child=arlo&dog=sadie
 
 // * = get everything
 // if this were at the top of the .get chain, it would prevent access to other routes because every path would match the asterisk, as it's first that checks the routes. so add last.  
 app.get('*', (req, res) => {
     res.send("I don't know that path")
 })
+
+// use nodemon to automatically restart the server on save
+// nodemon index.js
 
 app.listen(8080, () => {
     console.log("Listening on port 8080");
