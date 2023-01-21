@@ -15,8 +15,10 @@ app.get('/', (req, res) => {
 });
 
 // ejs syntax - <%= [HTML] %>
-app.get('random', (req, res) => {
-    app.render('random');
+app.get('/random', (req, res) => {
+    const num = Math.floor(Math.random() * 10) + 1;
+    // pass into page as an object
+    res.render('random', { rand: num });
 });
 
 
