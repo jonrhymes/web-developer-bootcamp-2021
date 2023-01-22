@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Your random number is: <%= rand %></h1>
-    
+    <!-- embed conditionals -->
+    <% if(rand % 2 === 0) { %>
+        <h2>This number is even!</h2>
+    <% } else { %>
+        <h2>That is an odd number</h2>
+    <% } %>   
+    <!-- single line -->
+    <h3><%= rand % 2 === 0 ? 'EVEN' : 'ODD' %> </h3>
 </body>
 </html>

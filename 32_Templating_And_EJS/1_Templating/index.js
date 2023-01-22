@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     res.render('home'); // looks for home.ejs in view directory. ejs uses html. you do not need .ejs file extension
 });
 
+app.get('/r/:subreddit', (req, res) => {
+    const { subreddit } = req.params;
+    res.render('subreddit', { subreddit });
+});
+
 // ejs syntax - <%= [HTML] %>
 app.get('/random', (req, res) => {
     const num = Math.floor(Math.random() * 10) + 1;
