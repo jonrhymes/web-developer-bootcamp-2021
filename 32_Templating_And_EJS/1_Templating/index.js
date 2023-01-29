@@ -3,6 +3,8 @@
 const express = require("express");
 const app = express();
 const path = require("path"); // imported to be able to start nodemon outside of pwd
+const redditData = require('./data.json');
+// console.log(redditData);
 
 app.set('view engine', 'ejs'); // must create a directory called 'views' - which the app searches for
 app.set('views', path.join(__dirname, '/views'));
@@ -14,9 +16,17 @@ app.get('/', (req, res) => {
     res.render('home'); // looks for home.ejs in view directory. ejs uses html. you do not need .ejs file extension
 });
 
+app.get('/cats', (req, res) => {
+    const cats = ['Blue', 'Gray', 'Black', 'White', 'Cool'];
+    res.render('cats', { allCats: cats });
+});
+
 app.get('/r/:subreddit', (req, res) => {
     const { subreddit } = req.params;
-    res.render('subreddit', { subreddit });
+    const data = redditData[subreddit];
+    console.log(data);
+    // res.render('subreddit', { subreddit });
+    res.render('subreddit', { ...data } ); // use the spread operator to access properties without dot notation. ex: name instead of data.name.
 });
 
 // ejs syntax - <%= [HTML] %>
